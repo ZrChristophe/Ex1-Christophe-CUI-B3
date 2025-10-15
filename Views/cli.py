@@ -1,5 +1,5 @@
 # Views/cli.py
-from Controllers.task_controller import TaskManager, TaskNotFoundError
+from controllers.task_controller import TaskManager, TaskNotFoundError
 from model.task import Task, TimedTask
 
 class CLI:
@@ -11,8 +11,7 @@ class CLI:
         print("1. Ajouter une tâche")
         print("2. Supprimer une tâche")
         print("3. Afficher toutes les tâches")
-        print("4. Marquer une tâche comme faite")
-        print("5. Quitter")
+        print("4. Quitter")
 
     def run(self):
         while True:
@@ -24,10 +23,8 @@ class CLI:
             elif choice == "2":
                 self.delete_task()
             elif choice == "3":
-                self.show_tasks()
-            elif choice == "4":
                 self.mark_task_done()
-            elif choice == "5":
+            elif choice == "4":
                 print("Au revoir !")
                 break
             else:
